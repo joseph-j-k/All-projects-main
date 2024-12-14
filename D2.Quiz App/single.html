@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+}
+.app{
+    text-align: center;
+    margin: 24px;
+    padding: 24px;
+   }
+.container{
+    padding-left: 15%;
+    /* margin-left: 23px; */
+} 
+.btn{
+    background: #fff;
+    color:#222;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="app">
+        <h3>Quiz App</h3>
+    </div>
+    <div class="container">
+        <h4>Multiple Choice Questions</h4> <br>
+
+        Q1. What does HTML stand for?<br> <br>
+        <input type="radio" name="question1" id="correct1"> Hyper Text Markup Language <br>
+        <input type="radio" name="question1" > Home Tool Markup Language <br>
+        <input type="radio" name="question1" > Hyper Transfer Markup Language <br><br>
+        
+        Q2. Which programming language is widely used for web development?<br> <br>
+        <input type="radio" name="question2" > C++ <br>
+        <input type="radio" name="question2" > JAVA <br>
+        <input type="radio" name="question2" id="correct2"> JavaScript <br><br>
+        
+        Q3. What is the purpose of the DOCTYPE declaration in HTML?<br> 
+        <input type="radio" name="question3" > To specify the character encoding <br>
+        <input type="radio" name="question3" id="correct3"> To define the document type <br>
+        <input type="radio" name="question3" > To link external stylesheets <br><br>
+        
+        Q4. What is the correct way to declare a variable in JavaScript?<br><br>
+        <input type="radio" name="question4" > var x = 10; <br>
+        <input type="radio" name="question4" > int x = 10; <br>
+        <input type="radio" name="question4" id="correct4"> let x = 10; <br><br>
+        
+        Q5. What is CSS used for?<br><br>
+        <input type="radio" name="question5" id="correct5"> Styling web pages <br> 
+        <input type="radio" name="question5" > Creating web server scripts <br>
+        <input type="radio" name="question5" > Writing database queries <br><br>
+
+        <input class="btn" type="submit" name="submit" values="submitQuiz" onclick="result()">
+    </div>
+
+
+    <script>
+        function result(){
+            var score = 0;
+            if(document.getElementById('correct1').checked){
+                score++;
+            }
+            if(document.getElementById('correct2').checked){
+                score++;
+            }
+            if(document.getElementById('correct3').checked){
+                score++;
+            }
+            if(document.getElementById('correct4').checked){
+                score++;
+            }
+            if(document.getElementById('correct5').checked){
+                score++;
+            }
+             document.write("Your Score is:" +score);
+            
+        }
+    </script>
+</body>
+</html>

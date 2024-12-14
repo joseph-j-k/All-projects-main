@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #cfa7f4, #95c0ff); */
+    background-color:#34495e;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+.container h1{
+    font-size: 35px;
+    color: #fff;
+    font-weight: 500;
+}
+.container button{
+    align-items: center;
+    background: #2c3e50;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 400px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    outline: none;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+.notes{
+   display: flex;
+    flex-wrap: wrap; /* Agar row fill ho jaye toh next line par notes jayein */
+    gap: 20px;
+}
+.trash{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}

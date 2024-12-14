@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,37,89,1) 28%, rgba(0,212,255,0.938813025210084) 670%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    min-height: 500px;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+.todo-app h2 {
+    color: rgb(2,0,36);
+    margin: 23px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    /* margin-bottom: 12px; */
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(2,0,36);
+}
+#item{
+    padding: 10px;
+    font-size: 23px;
+    font-weight: 500;
+    display: block;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+}
+#todo-box{
+    margin-top: 23px;
+    list-style: none;
+}
+#todo-box li{
+    background-color: #3c6382;
+    color: #ddd;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+    padding-right: 30px;
+    margin-top: 10px;
+    text-align: justify;
+    user-select: none;
+}
+#todo-box li i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.done{
+    text-decoration:line-through;
+    color: black;
+    background-color: #4b4b4b !important;
+}

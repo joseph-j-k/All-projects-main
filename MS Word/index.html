@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS-Word | JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #editor {
+            height: calc(100% - 80px);
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #toolbar {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        #wordCounter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button class="ql-bold">B</button>
+    <button class="ql-italic">I</button>
+    <button class="ql-underline">U</button>
+    <button class="ql-strike">S</button>
+    <button class="ql-color">Color</button>
+    <button class="ql-background">Background</button>
+    <button class="ql-align" value="center">Center</button>
+    <button class="ql-align" value="right">Right</button>
+    <button class="ql-align" value="justify">Justify</button>
+    <button class="ql-list" value="ordered">OL</button>
+    <button class="ql-list" value="bullet">UL</button>
+    <button class="ql-link">Link</button>
+    <button class="ql-line-height" value="1.5">1.5</button>
+    <button class="ql-line-height" value="2">2</button>
+</div>
+
+<div id="editor">
+    <p>Hello World!</p>
+    <p>Some initial <strong>bold</strong> text</p>
+</div>
+
+<div id="wordCounter">
+    Words: <span id="wordCount">0</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+<script>
+    const quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: '#toolbar' // Use custom toolbar
+        }
+    });
+
+    // Word counter function
+    function updateWordCount() {
+        const text = quill.getText();
+        const wordCount = text.trim().split(/\s+/).length;
+        document.getElementById('wordCount').textContent = wordCount;
+    }
+
+    // Listen for text changes in Quill editor
+    quill.on('text-change', function() {
+        updateWordCount();
+    });
+</script>
+
+</body>
+</html>
